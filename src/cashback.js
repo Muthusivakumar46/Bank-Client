@@ -15,7 +15,7 @@ export default function Cashback() {
         setError("");
         setSuccess("");
 
-        axios.post("https://bank-server-jxkl.onrender.com/withdraw", { name: username, email, password, amount })
+        axios.post("https://bank-server-2-va9w.onrender.com/withdraw", { name: username, email, password, amount })
             .then(response => {
                 if (response.data.success) {
                     setSuccess(`Withdrawal successful! New balance: ₹${response.data.newBalance}`);
