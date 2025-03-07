@@ -20,7 +20,7 @@ export default function Register() {
 
         let newUser = { name, email, password, amount: 1000 };
 
-        axios.post('https://bank-server-jxkl.onrender.com/Create', { name, email, password })
+        axios.post('https://bank-server-2-va9w.onrender.com/Create', { name, email, password })
         .then(response => {
             console.log("Server response:", response.data);
             setMessage(response.data.message);
