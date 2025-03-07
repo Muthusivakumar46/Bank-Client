@@ -15,7 +15,7 @@ export default function Alldata() {
     async function handleClick(e) {
         e.preventDefault();
         try {
-            let result = await axios.get("https://bank-server-jxkl.onrender.com/data");
+            let result = await axios.get("https://bank-server-2-va9w.onrender.com/data");
             setData(result.data);
         } catch (error) {
             console.error("Error fetching data", error);
@@ -25,7 +25,7 @@ export default function Alldata() {
     // Delete a user
     async function handleDelete(userId) {
       try {
-          let response = await axios.delete(`https://bank-server-jxkl.onrender.com/delete/${userId}`);
+          let response = await axios.delete(`https://bank-server-2-va9w.onrender.com/delete/${userId}`);
           if (response.data.success) {
               setData(data.filter(user => user._id !== userId)); // Remove user from UI
           }
@@ -46,7 +46,7 @@ export default function Alldata() {
     async function handleUpdate(e) {
         e.preventDefault();
         try {
-            let response = await axios.put(`https://bank-server-jxkl.onrender.com/update/${editUser.email}`, updatedUser);
+            let response = await axios.put(`https://bank-server-2-va9w.onrender.com/update/${editUser.email}`, updatedUser);
             if (response.data.success) {
                 setData(data.map(user => user.email === editUser.email ? updatedUser : user));
                 setEditUser(null);
