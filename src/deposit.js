@@ -15,7 +15,7 @@ export default function Deposit() {
         setError("");
         setSuccess("");
 
-        axios.post("https://bank-server-jxkl.onrender.com/deposit", { name: username, email, password, amount })
+        axios.post("https://bank-server-2-va9w.onrender.com/deposit", { name: username, email, password, amount })
             .then(response => {
                 if (response.data.success) {
                     setSuccess(`Deposit successful! New balance: ₹${response.data.newBalance}`);
